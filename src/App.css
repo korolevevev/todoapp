@@ -1,38 +1,221 @@
-.App {
-  text-align: center;
+body {
+    height: 100vh;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    width: 50%;
+    background-color: white;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: "Gotham Pro Light", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title-container {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title {
+    display: flex;
+    align-items: center;
+    font-family: "Gotham Pro Black", sans-serif;
+    font-size: 25px;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.app-description {
+    color: gray;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clock {
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.clock img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.add-todo-button {
+    border: none;
+    background-color: #00DFC8;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: 25px;
+    color: white;
+}
+
+.add-todo-button:hover {
+    opacity: 60%;
+}
+
+.add-todo-block {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    border: 3px solid #00DFC8;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-block div:first-child {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-column-gap: 20px;
+}
+
+#title-input {
+    width: 90%;
+    padding: 10px 20px;
+    border: 1px solid #00DFC8;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    border-left: 3px solid #00DFC8;
+}
+
+#title-input:focus {
+    outline: none;
+    background: #D7FFFE;
+}
+
+#deadline-input {
+    width: 77%;
+    padding: 10px 20px;
+    border: 1px solid #00DFC8;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    border-left: 3px solid #00DFC8;
+    color: gray;
+}
+
+#deadline-input:focus {
+    outline: none;
+    background: #D7FFFE;
+}
+
+#desc-input {
+    width: 91%;
+    padding: 20px;
+    border: 1px solid #00DFC8;
+    border-left: 3px solid #00DFC8;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+#desc-input:focus {
+    outline: none;
+    background: #D7FFFE;
+}
+
+.new-task-button {
+    height: 100%;
+    width: 100%;
+    background-color: #00DFC8;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+}
+
+.new-task-button:hover {
+    opacity: 60%;
+}
+
+.todo-list {
+    display: block;
+    width: 100%;
+}
+
+.task-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+    margin-bottom: 20px;
+    background: #F2F4F6;
+    padding: 20px;
+    border-radius: 10px;
+    column-gap: 30px;
+}
+
+.task-done {
+    background: #C9FFBF;
+    opacity: 70%;
+}
+
+.task-expired {
+    background: #F6DDDF;
+}
+
+.task-expired .deadline {
+    color: red;
+}
+
+.task-title {
+    font-weight: bold;
+}
+
+.task-description {
+    margin-top: 10px;
+    font-size: 13px;
+    width: 70%;
+    color: grey;
+}
+
+.deadline {
+    display: flex;
+    align-items: center;
+}
+
+.task-actions {
+    display: flex;
+    right: 20px;
+    column-gap: 20px;
+}
+
+.file-button {
+    border: none;
+    background-color: transparent;
+}
+
+.done-button {
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+}
+
+.delete-button {
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+}
+
+.done-button img, .delete-button img, .file-button img {
+    width: 20px;
+}
+
+.done-button:hover, .delete-button:hover, .edit-button:hover {
+    opacity: 50%;
 }
